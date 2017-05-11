@@ -112,13 +112,24 @@ nav {
 }
 
 .pokemon {
-  width: 50%;
-  margin: 0 auto;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.pokemon-image {
+  margin-top: 20px;
+}
+
+.pokemon-image img {
+  width: 200px;
+  height: 200px;
 }
 
 .pokemon ul:first-child {
   margin: 0 auto;
   justify-content: space-around;
+  margin-bottom: 20px;
 }
 
 .pokemon-item {
@@ -126,8 +137,11 @@ nav {
   width: 50%;
   display: flex;
   justify-content: space-around;
+  padding-bottom: 20px;
+  border-bottom: 1px solid $light-grey;
+
   img {
-    height: 150px;
+    height: 100px;
   }
 }
 
