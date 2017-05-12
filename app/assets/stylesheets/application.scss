@@ -49,19 +49,29 @@ header {
 
 
 nav {
-  width: 900px;
+  width: 200px;
   background-color: $red;
-  padding: 6px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 100%;
+
 
   ul {
+    overflow: scroll;
+    height: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: flex-end;
 
 
     li {
+
+      img {
+        width: 22px;
+        height: 22px;
+      }
+
       a {
         background-color: white;
         border-radius: 4px;
@@ -99,46 +109,87 @@ nav {
   }
 }
 
-.pokemon-index {
+.pokemon-detail {
   display: flex;
-  justify-content: center;
-  border: 5px solid black;
-  border-radius: 10px;
-  margin: 20px;
+  flex-grow: 1;
+  overflow-y: scroll;
+  align-items: center;
+  justify-content: space-around;
+  background-image: url('http://www.homedepot.com/catalog/productImages/1000/d7/d744807c-6944-4433-a9fc-5596c5ea26c0_1000.jpg');
 
-  ul li{
-    align-items: center;
+  ul {
+    height: 100%;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  li:first-child {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  li {
+    font-size: 20px;
+    color: black;
+    text-align: center;
+  }
+
+  .item-box {
+    border: 3px solid black;
+    border-radius: 20px;
+    background: white;
+    box-shadow: 5px 5px 10px 5px gray;
+    margin: 20px 0;
   }
 }
 
-.pokemon {
-  margin-top: 20px;
+div.pokemon-index {
+  height: 100%;
   display: flex;
-  flex-direction: column;
+  border: 5px solid black;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+div.index {
+  align-items: flex-start;
+  overflow-y: scroll;
+  max-height: 100%;
+  width: 200px;
+}
+
+.pokemon img {
+  height: 24px;
+  width: 24px;
+}
+
+li.pokemon{
+  vertical-align: baseline;
+  align-content: space-around;
+  border-top: 1px solid grey;
+  padding: 3px;
+}
+
+.pokemon span {
+  vertical-align: center;
+  padding: 0 5px;
+  font-size: 18px;
+  text-decoration: none;
 }
 
 .pokemon-image {
   margin-top: 20px;
-}
-
-.pokemon-image img {
-  width: 200px;
-  height: 200px;
-}
-
-.pokemon ul:first-child {
-  margin: 0 auto;
-  justify-content: space-around;
-  margin-bottom: 20px;
+  height: 30%;
+  width: 70%;
 }
 
 .pokemon-item {
-  margin: 0 auto;
-  width: 50%;
+  margin: 25px 0;
   display: flex;
   justify-content: space-around;
   padding-bottom: 20px;
-  border-bottom: 1px solid $light-grey;
 
   img {
     height: 100px;
@@ -148,7 +199,6 @@ nav {
 
 #root {
   height: 100%;
-  padding-top: 20px;
 }
 
 h2 {
